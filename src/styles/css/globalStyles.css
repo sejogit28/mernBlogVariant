@@ -1,0 +1,10 @@
+h1 {
+  color: #70cfb0;
+  text-align: center;
+  border-bottom: 0.5rem dashed red;
+}
+p {
+  color: #70cfb0;
+  text-align: center;
+  border-bottom: 0.1rem dashed blue;
+}

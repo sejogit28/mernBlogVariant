@@ -1,0 +1,16 @@
+@headingColor: rgb(112, 207, 176);
+
+.fansay-border(@borderWidth: 0.1rem, @borderColor: blue) {
+  border-bottom: @borderWidth dashed @borderColor;
+}
+
+h1 {
+  color: @headingColor;
+  text-align: center;
+  .fansay-border(0.5rem, red);
+}
+p {
+  color: @headingColor;
+  text-align: center;
+  .fansay-border;
+}
