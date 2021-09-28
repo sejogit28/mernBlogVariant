@@ -1,11 +1,13 @@
 import React from 'react';
 import './styles/css/globalStyles.css';
+import Heading from './Heading';
 
-function App() {
+
+
+function App(): JSX.Element {
   return (
     <div className="App">
-      <h1>TypeScript!!!!</h1>
-      <p>Here is a LESS test</p>
+      <Heading  h1aText='sup!' pText='This is a type script test!'/>
     </div>
   );
 }
