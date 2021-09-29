@@ -1,51 +1,52 @@
-import {actionTypes} from '../api/blogPostRoutes/blogPostActions';
+import { ActionTypes } from '../actionDefinitions/actionTypeEnum';
+import {Action} from '../actionDefinitions/actionInterfacesAndUnionType';
+import {blogPostModel} from '../actionDefinitions/actionBlogPostModel'
 
-interface BlogPostsState
-{
-    blogPosts: any[]
-}
-
-interface BlogPostsAction
+/* interface BlogPostsAction 
 {
     type: string,
     payload?: any
 }
-
-const initialBlogPostsState = 
+*/
+interface BlogPostsState
+{
+    blogPosts: blogPostModel[]
+}
+const initialBlogPostsState: BlogPostsState = 
 {
     blogPosts: []
 }
 
-export const blogPostReducer = (state: BlogPostsState = initialBlogPostsState , action: BlogPostsAction) =>
+export const blogPostReducer = (state = initialBlogPostsState , action: Action) =>
 {
     switch(action.type)
     {
-        case actionTypes.FetchAll:
+        case ActionTypes.FetchAllBlogPosts:
             return{
                 ...state,
                 blogPosts: [...action.payload]
             }
-            case actionTypes.FetchSingle:
+            case ActionTypes.FetchSingleBlogPosts:
             return{
                 ...state,
                 blogPosts: [...action.payload]
             }
-            case actionTypes.CreateBlogPost:
+            case ActionTypes.CreateBlogPost:
             return{
                 ...state,
                 blogPosts: [...state.blogPosts, action.payload]
             }
            
-            case actionTypes.UpdateBlogPost:
+            case ActionTypes.UpdateBlogPost:
             return{
                 ...state,
                 blogPosts: state.blogPosts.map(x => x._id == action.payload._id ? action.payload : x)
             }
         
-            case actionTypes.DeleteBlogPost:
+            case ActionTypes.DeleteBlogPost:
             return{
                 ...state,
-                blogPosts: state.blogPosts.filter(x => x._id != action.payload) 
+                blogPosts: state.blogPosts.filter(x => x._id != action.payload)
             }
              default:
              return state;

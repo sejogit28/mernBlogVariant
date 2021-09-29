@@ -1,19 +1,21 @@
-const baseUrl : string = "https://localhost:5000/blogPost/";
 
 interface IBlogPostService
 {
     getBlogPosts: () => Promise<any>;
-    getBlogPostPagi: (pageNum: number) => Promise<any>;
-    getBlogPost: (id: number) => Promise<any>;
+    getBlogPostPagi: (pageNum: string) => Promise<any>;
+    getBlogPost: (id: string) => Promise<any>;
     addBlogPost: (formData: FormData) => Promise<any>;
-    editBlogPostNoPic: (id: number, editedBlogPost: any) => Promise<any>;
-    editBlogPostPic: (id: number, editedBlogPostPicFormData: FormData) => Promise<any>;
-    deleteBlogPost: (id: number) => Promise<any>;
-    addComment: (id: number, newComm: any) => Promise<any>;
-    editComment: (id: number, commId: number, newCommBody: any) => Promise<any>;
-    deleteComment: (id: number, commId: number) => Promise<any>;
-
+    editBlogPostNoPic: (id: string, editedBlogPost: any) => Promise<any>;
+    editBlogPostPic: (id: string, editedBlogPostPicFormData: FormData) => Promise<any>;
+    deleteBlogPost: (id: string) => Promise<any>;
+    addComment: (id: string, newComm: any) => Promise<any>;
+    editComment: (id: string, commId: string, newCommBody: any) => Promise<any>;
+    deleteComment: (id: string, commId: string) => Promise<any>;
+    
 }
+
+const baseUrl : string = "https://localhost:5000/blogPost/";
+
 
 const BlogPostService: IBlogPostService = {
         getBlogPosts :  async () =>
