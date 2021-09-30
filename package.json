@@ -16,7 +16,9 @@
     "antd": "^4.16.13",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-medium-editor": "^1.8.1",
     "react-redux": "^7.2.5",
+    "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-thunk": "^1.0.0",
     "redux": "^4.1.1",
@@ -47,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.0"
   }
 }

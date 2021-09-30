@@ -10,7 +10,7 @@ interface Props
 
 }
 
-const Heading = (props: Props) => 
+const TestHeading: React.FC<Props> = (props: Props) => 
 {
     return (
         <div>
@@ -22,4 +22,4 @@ const Heading = (props: Props) =>
     )
 }
 
-export default Heading
+export default TestHeading

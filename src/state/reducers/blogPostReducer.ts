@@ -40,13 +40,13 @@ export const blogPostReducer = (state = initialBlogPostsState , action: Action) 
             case ActionTypes.UpdateBlogPost:
             return{
                 ...state,
-                blogPosts: state.blogPosts.map(x => x._id == action.payload._id ? action.payload : x)
+                blogPosts: state.blogPosts.map(x => x._id === action.payload._id ? action.payload : x)
             }
         
             case ActionTypes.DeleteBlogPost:
             return{
                 ...state,
-                blogPosts: state.blogPosts.filter(x => x._id != action.payload)
+                blogPosts: state.blogPosts.filter(x => x._id !== action.payload)
             }
              default:
              return state;

@@ -1,7 +1,6 @@
-h1 {
-  color: #70cfb0;
+.Page-heading {
   text-align: center;
-  border-bottom: 0.4rem dashed red;
+  font-weight: bolder;
 }
 p {
   color: #70cfb0;

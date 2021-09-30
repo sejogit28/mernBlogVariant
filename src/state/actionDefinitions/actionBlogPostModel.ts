@@ -1,6 +1,6 @@
 export type blogPostModel = 
 {
-    _id: string 
+    readonly _id?: string 
     title: string
     author: string
     summary: string
@@ -8,9 +8,9 @@ export type blogPostModel =
     imageUrl: string
     cloudinaryId?:  string
     readTime: number
-    tags?: string[]
+    tags: any[]
     //enum: string[] 
-    createdAt?: any
-    updatedAt?: any
-    comments: any[]
+    readonly createdAt?: any
+    readonly updatedAt?: any
+    comments?: any[]
 }
