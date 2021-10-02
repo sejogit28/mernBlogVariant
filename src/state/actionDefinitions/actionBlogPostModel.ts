@@ -7,7 +7,7 @@ export type blogPostModel =
     body: string
     imageUrl: string
     cloudinaryId?:  string
-    readTime: number
+    readTime: string
     tags: any[]
     //enum: string[] 
     readonly createdAt?: any

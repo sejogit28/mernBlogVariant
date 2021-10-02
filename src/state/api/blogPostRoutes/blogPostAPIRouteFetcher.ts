@@ -14,7 +14,7 @@ interface IBlogPostService
     
 }
 
-const baseUrl : string = "https://localhost:5000/blogPost/";
+const baseUrl : string = "http://localhost:5000/blogPost/";
 
 
 const BlogPostService: IBlogPostService = {
@@ -56,7 +56,7 @@ const BlogPostService: IBlogPostService = {
         addBlogPost : async (formData) => 
         {
             console.log(formData);
-          return fetch(`${baseUrl}blogPost/add`, 
+          return fetch(`${baseUrl}add`, 
           {
               method: "POST",
               body : formData,

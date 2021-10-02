@@ -9,7 +9,7 @@ import {Dispatch} from 'redux';
 const formateData = (data: any) => ({
     ...data,
     readTime:parseInt(data.readTime?data.readTime:0)
-})
+}) 
 
 
 
@@ -37,7 +37,7 @@ export const fetchAllBlogPosts = () => (dispatch: Dispatch<Action>) =>
 
 
 
-export const create = (data: FormData, onSuccess: any) => (dispatch: Dispatch<Action>) => 
+export const createBlogPost = (data: FormData/* , onSuccess: any */) => (dispatch: Dispatch<Action>) => 
 {
     data = formateData(data)
     BlogPostService.addBlogPost(data) //not passing data into the create function leads to a 415 error
@@ -46,7 +46,7 @@ export const create = (data: FormData, onSuccess: any) => (dispatch: Dispatch<Ac
                 type: ActionTypes.CreateBlogPost,
                 payload: res.data
             })
-            onSuccess()
+            
         })
     .catch(err => console.log(err))
 }
